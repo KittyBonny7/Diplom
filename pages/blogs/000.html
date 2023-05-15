@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../../img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="/../img/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <!-- НАЧАЛО. Скрипт для плавной прокрутки страницы по нажатию кнопки -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() != 0) {
+            $("#toTop").fadeIn();
+          } else {
+            $("#toTop").fadeOut();
+          }
+        });
+
+        $("#toTop").click(function () {
+          $("body,html").animate({ scrollTop: 0 }, 800);
+        });
+      });
+    </script>
+    <!-- КОНЕЦ. Скрипт для плавной прокрутки страницы по нажатию кнопки -->
+</head>
+<body>
+    <!-- НАЧАЛО. Меню сайта -->
+    <div class="menu-container">
+      <ul class="menu">
+        <li><a href="../../index.html" class="logo-main_style">
+          <img src="../../img/logo-main.svg" alt="logo">
+        </a></li>
+        <li class="polls"><a href="#">Опросы</a>
+          <ul class="sub-menu">
+            <li><a href="../polls/family.html" style="margin-top: 20px">Семья</a></li>
+            <li><a href="../polls/policy.html">Политика</a></li>
+            <li><a href="../polls/animals.html">Животные</a></li>
+            <li><a href="../polls/ecology.html">Экология</a></li>
+          </ul>
+        </li>
+        <li><a href="../publications.html">Публикации</a></li>
+        <li><a href="../contacts.html">Контакты</a></li>
+        <li><a href="../information.html">Информация</a></li>
+      </ul>
+    </div>
+    <!-- КОНЕЦ. Меню сайта -->
+  
+    <!-- НАЧАЛО. Меню в виде кнопки для мобилки -->
+    <div class="dropdown">
+      <button onclick="toggleMenu()" class="dropbtn"></button>
+      <div id="myDropdown" class="dropdown-content">
+        <div class="dropdown-content-text"><a href="../../index.html">Главная</a></div>
+        <div class="dropdown-content-text"><a href="../polls/family.html">Семья</a></div>
+        <div class="dropdown-content-text"><a href="../polls/policy.html">Политика</a></div>
+        <div class="dropdown-content-text"><a href="../polls/animals.html">Животные</a></div>
+        <div class="dropdown-content-text"><a href="../polls/ecology.html">Экология</a></div>
+        <div class="dropdown-content-text"><a href="../publications.html">Публикации</a></div>
+        <div class="dropdown-content-text"><a href="../contacts.html">Контакты</a></div>
+        <div class="dropdown-content-text"><a href="../information.html">Информация</a></div> 
+      </div>
+    </div>
+    <!-- КОНЕЦ. Меню в виде кнопки для мобилки -->
+
+    <!-- НАЧАЛО. Основная информация сайта -->
+    <main class="main-container">
+      <!-- 1 секция -->
+      <section id="publication-1" lang="ru">
+
+        <div id="publication-1-banner">
+          <div id="publication-title">
+            <strong>Открытие сайта</strong>
+          </div>
+          <div id="publication-subtitle">
+            <p>С радостью сообщаем о запуске нового проекта - сайта социальных онлайн опросов, который поможет получить ценные данные и мнения населения по различным социальным вопросам!</p>
+          </div>
+        </div>
+
+        <div id="publication-img">
+          <img src="../../img/blogs/000/banner.png" style="width: 100%" alt="социальные опросы" />
+        </div>
+      </section>
+
+      <!-- 2 секция -->
+      <section>
+
+        <p>⠀⠀⠀Социальные опросы - это мощный инструмент сбора информации о мнениях и предпочтениях людей по различным вопросам. Они могут быть использованы для проведения маркетинговых исследований,
+           изучения общественного мнения по различным социальным проблемам, а также для сбора фидбека от пользователей веб-сайтов и приложений.</p><br>
+        <p>⠀⠀⠀По мнению россиян, опросы общественного мнения представляют интерес, прежде всего, для политиков (46%) и самих социологов (41%). Каждый четвертый (26%) считает, что эти данные нужны СМИ.
+           Пятая доля опрошенных (22%) уверена, что результаты исследований любопытно было бы узнать всем гражданам. За четыре года существенно возросла доля тех, кто говорит о заинтересованности
+            в опросах представителей общественных организаций (с 12% в 2010 г. до 19% в 2014 г.), и, напротив, реже стали отмечать потребность бизнеса в подобных исследованиях (с 24% до 17%, соответственно). 
+             Только 8% называют проведение опросов вовсе ненужным делом. Социологические исследования помогают донести мнение простых людей до представителей властей - уверены 77% наших сограждан, 
+             однако эта цифра ниже значения десятилетней давности (84% в 2005 г.). Более половины россиян (58%) полагают, что политики и предприниматели используют эти данные для повышения эффективности 
+             своей деятельности. В то, что опросы проводятся в корыстных целях (узнать сведения о личной жизни и имуществе людей) не верят две трети россиян (66%). Большинство респондентов (60%) также
+              отмечают научные цели проведения исследований (с 67% в 2005 г.). 45% опрошенных считают компании, проводящие опросы, обычными коммерческими структурами, тогда как 37% придерживаются иной 
+              точки зрения. Наконец, 41% респондентов проведение социологических опросов представляется просто «модным делом», однако 42% это мнение не разделяют (Инициативный всероссийский опрос ВЦИОМ 
+              проведён 1-2 ноября 2014 г. Опрошено 1600 человек в 130 населенных пунктах в 42 областях, краях и республиках России. Статистическая погрешность не превышает 3,4%).</p><br>
+        <p>⠀⠀⠀Вы можете воспользоваться навигационным меню для перемещения по сайту, на каждой странице есть описание, дающее понять какая здесь содержится информация. Всего есть несколько разделов: 
+          Главная, Опросы, Публикации, Контакты и Информация. В свою очереди "Опросы" делятся на 4 подраздела: Семья, Политика, Животные и Экология. Если у Вас возникнут проблемы или предложения 
+          по улучшению сайта - звоните на горячую линию! Мы очень ждём Вашей обратной связи.</p><br>
+
+      </section>
+
+    </main>
+    <!-- КОНЕЦ. Основная информация сайта -->
+
+
+    <!-- НАЧАЛО. Подвал для сайта -->
+    <!-- Стрелка  прокрутки в начало страницы-->
+    <div id="toTop">⬆</div>
+    <!-- Футер -->
+    <footer>
+        <div class="footer-container">
+          <p>Горячая линия: <br>8 (953)-333-22-11</p>
+          <p>г. Калуга, ул. Маршала Жукова, д.35</p>
+        </div>
+    </footer>
+    <!-- КОНЕЦ. Подвал для сайта -->
+
+    <!-- НАЧАЛО. Подключение JS файлов -->
+    <script src="../../js/try.js" defer></script>
+    <!-- КОНЕЦ. Подключение JS файлов -->
+</body>
+</html>

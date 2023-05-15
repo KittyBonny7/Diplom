@@ -1,0 +1,172 @@
+/*  1. 
+    2. 
+    3.
+    4.
+    5.
+*/
+
+/* НАЧАЛО. Подключение шрифта Montserrat */
+/* montserrat-regular - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/montserrat-v25-cyrillic_latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v25-cyrillic_latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* montserrat-600 - cyrillic_latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/montserrat-v25-cyrillic_latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v25-cyrillic_latin-600.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* montserrat-700 - cyrillic_latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/montserrat-v25-cyrillic_latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v25-cyrillic_latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+/* КОНЕЦ. Подключение шрифта Montserrat */
+
+
+/* НАЧАЛО. Общие переменные (Social polls (Социальные опросы) - sp) */
+:root{
+    --sp-solor: #2042AB;
+    --sp-solor-maintext: black;
+    --sp-solor-text: white;
+    --sp-solor-button:#386edb;
+    --sp-solor-button-hover:#5387f0;
+    --sp-solor-button-dark:#2f59ad;
+}
+/* КОНЕЦ. Общие перменные */
+
+
+/* НАЧАЛО. Медиа-запрос для 1400px */
+@media screen and (min-width: 1440px){
+    main{
+        margin-right: 6rem;
+        margin-left: 6rem;
+    }
+    .marg_bottem {
+        margin-bottom: 13.5rem;
+    }
+    .marg{
+        margin-top: 13.5rem;
+        margin-bottom: 13.5rem;  
+    }
+    .main_banner{
+        max-width: 120rem;
+    }
+    .main_banner_titile{
+        font-size: 3.6rem;
+        margin-bottom: 2.5rem;
+    }
+    .main_banner_subtitile{
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+    .main_banner_picture{
+        padding: 7rem 0 7rem 7rem;
+    }
+}
+/* КОНЕЦ. Медиа-запрос для 1400px */
+
+/* НАЧАЛО. Стили для html */
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    margin-bottom: 6rem;
+}
+
+.header_main{
+    height: 60px;
+    background: var(--sp-solor)
+}
+
+/* КОНЕЦ. Стили для html */
+
+
+/* НАЧАЛО. Стили для <main>*/
+main{
+    width: 1200px;
+    height: 442px;
+}
+
+.main_banner{
+    width: 100%;
+    background: linear-gradient(90deg, #EDEDEF 0%, #E4E4E6 100%);
+    background: linear-gradient(90deg, #EDEDEF 0%, #E4E4E6 100%);
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+
+.main_banner_text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 70px 30px 70px 70px;
+}
+
+.main_banner_picture{
+    max-width: 600px;
+    padding-right: 70px;
+}
+.main_banner_button{
+    color: var(--sp-solor-text);
+    background-color: var(--sp-solor-button);
+    max-width: 268px;
+    height: 60px;
+    outline: none;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 1px 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.main_banner_button:hover{ 
+    background-color: var(--sp-solor-button-hover);
+    box-shadow: 0 3px 5px var(--sp-solor-button-dark);
+}
+
+/* КОНЕЦ. Стили для <main> */
+
+
+/* НАЧАЛО. */
+/* КОНЕЦ. */
+
+
+/* НАЧАЛО. */
+/* КОНЕЦ. */

@@ -1,0 +1,978 @@
+/* НАЧАЛО. Подключение шрифта Montserrat */
+/* montserrat-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v25-cyrillic_latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v25-cyrillic_latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-600 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/montserrat-v25-cyrillic_latin-600.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v25-cyrillic_latin-600.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* montserrat-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat-v25-cyrillic_latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('../fonts/montserrat-v25-cyrillic_latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* КОНЕЦ. Подключение шрифта Montserrat */
+
+
+/* НАВИГАЦИЯ ПО КОДУ: 
+    1. ПЕРЕМЕННЫЕ ДЛЯ CSS
+    2. ОБЩИЕ СТИЛИ ДЛЯ BODY 
+    3. ОБЩИЕ СТИЛИ ДЛЯ МЕНЮ И ВЫПАДАЮЩЕГО СПИСКА
+    4. КНОПКА МЕНЮ
+    5. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1440px
+    6. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px
+    7. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px
+    8. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px
+    9. СТИЛИ ДЛЯ КОНТЕНТА
+    10. СТИЛИ ДЛЯ ГЛАВНОЙ
+    11. СТИЛИ ДЛЯ СЕМЬЯ
+    12. СТИЛИ ДЛЯ ПОЛИТИКА
+    13. СТИЛИ ДЛЯ ЖИВОТНЫХ
+    14. СТИЛИ ДЛЯ ЭКОЛОГИЯ
+    15. СТИЛИ ДЛЯ ПУБЛИКАЦИИ 
+    16. СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТЫ
+    17. СТИЛИ ДЛЯ СТРАНИЦЫ ИНФОРМАЦИИ*/
+
+
+/* 1. НАЧАЛО. ПЕРЕМЕННЫЕ ДЛЯ CSS */
+:root {
+  /* (Social polls (Социальные опросы) - sp) */
+  --sp-solor: #006400;
+  --sp-solor-maintext: #080D13;
+  --sp-solor-text: #080D13A6;
+  --sp-solor-body-background: #F5F5F6;
+  --sp-solor-button:#008000;
+  --sp-solor-button-hover:#228B22;
+  --sp-solor-button-dark:#006400;
+  --sp-solor-button-text: #FFFFFF;
+  --sp-solor-button-text-hover: #00FF00;
+
+}
+/* 1. КОНЕЦ. ПЕРЕМЕННЫЕ ДЛЯ CSS */
+
+
+/* 2. НАЧАЛО. ОБЩИЕ СТИЛИ ДЛЯ BODY */
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    line-height: 150%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: var(--sp-solor-text);
+    margin: 0;
+    background-color: var(--sp-solor-body-background);  
+    scroll-padding-top: 100px;
+}
+/* 2. КОНЕЦ. ОБЩИЕ СТИЛИ ДЛЯ BODY */
+
+
+/* 3. НАЧАЛО. ОБЩИЕ СТИЛИ ДЛЯ МЕНЮ И ВЫПАДАЮЩЕГО СПИСКА */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--sp-solor);
+    z-index: 9999;
+  }
+  
+  .menu {
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-main_style{
+    height: 32px;
+  }
+
+  .menu li {
+    position: relative;
+  }
+  
+  .menu a {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    text-transform: uppercase;
+    color: var(--sp-solor-button-text);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .menu-container a:hover{
+    color: var(--sp-solor-button-text-hover);
+  }
+
+   ul li:hover a {
+    color: var(--sp-solor-button-text);
+  }
+
+   /* Стили для выпадающего списка при наведении на "Опросы" */
+  .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin: 0;
+    padding: 0px;
+    left: 0;
+    list-style: none;
+    background-color: var(--sp-solor);
+    width: calc(100% - 2px); /* ширина с учетом границы */
+    z-index: 1; 
+  }
+  
+  .sub-menu li {
+    width: 100%;
+  }
+  
+  .sub-menu a {
+    display: block;
+    padding: 15px;
+    color: var(--sp-solor-button-text);
+    text-decoration: none;
+  }
+  
+  .sub-menu li > a {
+    color: var(--sp-solor-button-text);
+  }
+
+  .menu .polls:hover > .sub-menu {
+    display: block;
+  }
+  
+  .menu li {
+    width: 100%;
+  }
+
+  @media (max-width: 40em) {
+    .menu li {
+      width: 100%;
+    }
+    
+}
+/* 3. КОНЕЦ. ОБЩИЕ СТИЛИ ДЛЯ МЕНЮ И ВЫПАДАЮЩЕГО СПИСКА */
+
+
+/* 4. НАЧАЛО.КНОПКА МЕНЮ */
+.dropdown{
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--sp-solor);
+    z-index: 9999;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--sp-solor);
+    z-index: 1;
+    padding:10px;
+  }
+  
+  .dropdown-content a{
+    color: var(--sp-solor-button-text);
+    text-decoration: none;
+    padding-right:10px;
+    padding-left: 10px;
+  }
+
+  /* Кнопка для открытия выпадающего меню */
+  .dropbtn {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url('../img/menu.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+  }
+  /* Отображение выпадающего меню при нажатии на кнопку */
+  .show {
+    display: block;
+  }
+/* 4. КОНЕЦ.КНОПКА МЕНЮ */
+
+
+/* 5. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1440px */
+  @media only screen and (min-width: 1440px) {
+    body{
+      font-size: 18px;
+    }
+    .menu{
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .dropdown{
+      display: none;
+  }
+    .main-container{
+      padding-top: 120px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    section{
+      max-width: 1200px;
+      margin-bottom: 135px; 
+    }
+    .footer-container{
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+    }  
+    .titles{
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    .subtitles{
+      font-size: 18px;
+      margin-bottom: 60px;
+    }
+    .banner{
+      width: 600px;
+      padding: 70px 0 70px 70px;
+    }
+    .banner-img-img{
+      max-width: 600px;
+    }
+    .banner-title{
+      font-size: 36px;
+    }
+    .banner-subtitle{
+      font-size: 18px;
+    }
+    #information-3{
+      display: flex;
+      flex-direction: row;
+      }
+    #information-3-text{
+      width: 600px;
+      padding: 70px 0 70px 70px;
+    }
+    #information-3-img{
+      display: flex;
+      align-items: center;
+      max-width: 483px;
+    }
+}
+/* 5. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1440px */
+
+
+/* 6. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px */
+  @media only screen and (max-width: 1024px) {
+    body{
+      font-size: 18px;
+    }
+    .menu{
+      max-width: 964px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .dropdown{
+      display: none;
+  }
+    .main-container{
+      padding-top: 120px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    section{
+      max-width: 964px;
+      margin-bottom: 95px;
+      margin-left: 30px;
+      margin-right: 30px; 
+    }
+    .footer-container{
+      max-width: 964px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .titles{
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    .subtitles{
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+    .banner{
+      width: 480px;
+      padding: 50px 0 50px 50px;
+    }
+    .banner-img-img{
+      max-width: 467px;
+    }
+    .banner-title{
+      font-size: 30px;
+    }
+    .banner-subtitle{
+      font-size: 18px;
+    }
+    #information-3{
+    display: flex;
+    flex-direction: row;
+    }
+    #information-3-text{
+      width: 480px;
+      padding: 50px 0 50px 50px;
+    }
+    #information-3-img{
+      display: flex;
+      align-items: center;
+      max-width: 466px;
+    }
+}
+/* 6. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px */
+
+
+/* 7. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px */
+  @media (max-width: 768px) {
+    body{
+      font-size: 16px;
+    }
+    .main-container{
+      padding-top: 60px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .menu-container{
+        display: none;
+    }
+    .dropdown{
+        display: block;
+    }
+    .dropdown-content-text{
+      padding: 20px 30px 20px 30px;
+    }
+    .dropbtn{
+      margin: 10px 0 10px 32px;
+    }
+    section{
+      max-width: 691px;
+      margin-bottom: 85px;
+      margin-left: 30px;
+      margin-right: 30px; 
+    }
+    .footer-container{
+      max-width: 691px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .titles{
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    .subtitles{
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    .banner{
+      width: 352px;
+      padding: 30px 0 30px 30px;
+    }
+    .banner-img-img{
+      width: 339px;
+    }
+    .banner-title{
+      font-size: 24px;
+    }
+    .banner-subtitle{
+      font-size: 16px;
+    }
+    #google_maps{
+      display: none;
+    }
+    #information-3{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+    #information-3-text{
+      padding: 30px 0 30px 30px;
+    }
+    #information-3-img{
+      max-width: 524px;
+    }
+  }
+/* 7. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px */
+
+
+/* 8. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px */
+  @media only screen and (max-width: 320px) {
+    body{
+      font-size: 14px;
+    }
+    section{
+      max-width: 288px;
+      margin-bottom: 70px;
+      margin-left: 16px;
+      margin-right: 16px; 
+    } 
+    .main-container{
+      padding-top: 60px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .dropdown{
+      display: block;
+    }
+    .dropdown-content-text{
+      padding: 10px 20px 10px 20px;
+    }
+    .dropbtn{
+      margin: 10px 0 10px 16px;
+    }
+    /* Открыть выпадающий список */
+    .menu .sub-menu {
+      display: block !important;
+    }
+    /* Поменять расположение меню на столбик */
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .menu li {
+      margin: 0;
+    }
+    .menu a {
+      padding: 10px 20px;
+    }
+    .sub-menu {
+      position: static;
+      display: none;
+      background-color: var(--sp-solor);
+    }
+    .sub-menu li > a {
+        background: var(--sp-solor);
+        color: var(--sp-solor-button-text);
+    }
+    .footer-container{
+        display: flex;
+    }
+    .footer-container{
+      max-width: 288px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .titles{
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    .subtitles{
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    .main-banner{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .banner{
+      width: 258px;
+      padding: 15px 15px 15px 15px;
+    }
+    .banner-img-img{
+      max-width: 258px;
+    }
+    .banner-title{
+      font-size: 22px;
+    }
+    .banner-subtitle{
+      font-size: 14px;
+    }
+    #google_maps{
+        display: none;
+    }
+    #information-3{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    #information-3-text{
+      width: 258px;
+      padding: 15px 15px 15px 15px;
+    }
+    #information-3-img{
+      max-width: 258px;
+    }
+}
+/* 8. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px */
+
+
+/* 9. НАЧАЛО. СТИЛИ ДЛЯ КОНТЕНТА */
+section{
+  margin-bottom: 135px;
+  color: var(--sp-solor-text);
+  line-height: 150%;
+} 
+
+a{
+color: var(--sp-solor);
+}
+
+a:hover{
+color: var(--sp-solor-button-hover)
+}
+
+.titles {
+    font-weight: 700;
+    color: var(--sp-solor-maintext);
+    line-height: 100%;
+    text-align: center;
+  }
+  
+  .subtitles {
+    color: var(--sp-solor-text);
+    line-height: 150%;
+    hyphens: auto;
+    text-align: center;
+  }
+
+  /* НАЧАЛО. Общие стили для БАННЕРА */
+  .main-banner{
+    background: linear-gradient(90deg, #EDEDEF 0%, #E4E4E6 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .banner{
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .banner-img-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner-title{
+    color: var(--sp-solor-maintext);
+    line-height: 100%;
+    max-width: auto;
+    font-weight: 700;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    padding-bottom: 30px;
+    hyphens: auto;
+  }
+  
+  .banner-subtitle{
+    max-height: 700px;
+    line-height: 150%;
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+    hyphens: auto;
+  }
+  /* КОНЕЦ. Общие стили для БАННЕРА */
+
+
+  /* Кнопка  для пролистывания вверх*/
+#toTop {
+    width: 50px;
+    border: 1px solid var(--sp-solor-maintext);
+    background: var(--sp-solor);
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    color: var(--sp-solor-maintext);
+  }
+  #toTop:hover {
+    background: var(--sp-solor-button-hover);
+    color: var(--sp-solor-button-text-hover);
+    border: 1px solid var(--sp-solor-button-text-hover);
+  }
+
+/* Подвал */
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--sp-solor);
+    margin: 0 auto;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-container p {
+    font-size: 12px;
+    color: var(--sp-solor-button-text);
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 15px 0 0 0;
+  }
+  .footer-phone{
+    color: var(--sp-solor-button-text);
+  }
+  .footer-phone:hover{
+    color: var(--sp-solor-button-text-hover);
+  }
+/* 9. КОНЕЦ. СТИЛИ ДЛЯ КОНТЕНТА */
+
+
+/* 10. НАЧАЛО. СТИЛИ ДЛЯ ГЛАВНОЙ */
+/* Инфрмация о сотрудниках*/
+#index-3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#employ-1{
+    max-width: 300px;
+    display: flex;
+}
+
+#employ-2{
+    margin-top: 40px;
+    max-width: 300px;
+    display: flex;
+}
+
+.text_employ{
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--sp-solor)
+}
+
+/* Инфрмация о публикациях (Главная)*/
+.column {
+    -webkit-column-width: 200px;
+    -moz-column-width: 200px;
+    column-width: 200px;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    -webkit-column-rule: 1px solid #ccc;
+    -moz-column-rule: 1px solid #ccc;
+    column-rule: 1px solid var(--sp-solor-maintext);
+}
+  
+.column a {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+}
+
+  /* Стили для гугл карты (Главная)*/
+    #google-maps {
+    color: var(--sp-solor-maintext);
+    overflow: hidden;
+  }
+  #index-map{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+/* 10. КОНЕЦ. СТИЛИ ДЛЯ ГЛАВНОЙ */
+
+
+/* 11. НАЧАЛО. СТИЛИ ДЛЯ СЕМЬЯ */
+#family-1{
+    max-width: 1920px;
+    background: linear-gradient(90deg, #FCF9FF 0%, #BCB9BF 100%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  #family-1-banner{
+  padding-bottom: 50px;
+  }
+  
+  #family-title{
+  font-size: 2rem;
+  line-height: 100%;
+  max-width: auto;
+  font-weight: 700;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  padding-bottom: 30px;
+  hyphens: auto;
+  }
+  
+  #family-subtitle{
+  max-width: 400px;
+  max-height: 700px;
+  line-height: 150%;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  hyphens: auto;
+  }
+  
+  #family-1-img{
+    max-width: 300px;
+    max-height: 300px;
+  }
+/* 11. КОНЕЦ. СТИЛИ ДЛЯ СЕМЬЯ */
+
+
+/* 12. НАЧАЛО. СТИЛИ ДЛЯ ПОЛИТИКА */
+#policy-1{
+    max-width: 1920px;
+    background: linear-gradient(90deg, #FCF9FF 0%, #BCB9BF 100%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  #policy-1-banner{
+  padding-bottom: 50px;
+  }
+  
+  #policy-title{
+  font-size: 2rem;
+  line-height: 100%;
+  max-width: auto;
+  font-weight: 700;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  padding-bottom: 30px;
+  hyphens: auto;
+  }
+  
+  #policy-subtitle{
+  max-width: 400px;
+  max-height: 700px;
+  line-height: 150%;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  hyphens: auto;
+  }
+  
+  #policy-1-img{
+    max-width: 300px;
+    max-height: 300px;
+  }
+/* 12. КОНЕЦ. СТИЛИ ДЛЯ ПОЛИТИКА */
+
+
+/* 13. НАЧАЛО. СТИЛИ ДЛЯ ЖИВОТНЫХ */
+#animals-1{
+    max-width: 1920px;
+    background: linear-gradient(90deg, #FCF9FF 0%, #BCB9BF 100%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  #animals-1-banner{
+  padding-bottom: 50px;
+  }
+  
+  #animals-title{
+  font-size: 2rem;
+  line-height: 100%;
+  max-width: auto;
+  font-weight: 700;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  padding-bottom: 30px;
+  }
+  
+  #animals-subtitle{
+  max-width: 400px;
+  max-height: 700px;
+  line-height: 150%;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  }
+  
+  #animals-img{
+    max-width: 300px;
+    max-height: 300px;
+  }
+/* 13. КОНЕЦ. СТИЛИ ДЛЯ ЖИВОТНЫХ */
+
+
+/* 14. НАЧАЛО. СТИЛИ ДЛЯ ЭКОЛОГИЯ */
+#ecology-1{
+    max-width: 1920px;
+    background: linear-gradient(90deg, #FCF9FF 0%, #BCB9BF 100%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  #ecology-1-banner{
+  padding-bottom: 50px;
+  }
+  
+  #ecology-title{
+  font-size: 2rem;
+  line-height: 100%;
+  max-width: auto;
+  font-weight: 700;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  padding-bottom: 30px;
+  hyphens: auto;
+  }
+  
+  #ecology-subtitle{
+  max-width: 400px;
+  max-height: 700px;
+  line-height: 150%;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  hyphens: auto;
+  }
+  
+  #ecology-1-img{
+    max-width: 300px;
+    max-height: 300px;
+  }
+/* 14. КОНЕЦ. СТИЛИ ДЛЯ ЭКОЛОГИЯ */
+
+
+/* 15. НАЧАЛО. СТИЛИ ДЛЯ ПУБЛИКАЦИИ */
+  legend{
+    font-size: 20px;
+    line-height: 100%;
+    max-width: auto;
+    font-weight: 700;
+  }
+
+  fieldset{
+    margin-bottom: 40px;
+    padding: 20px;
+    border-width: 1px;
+    border-style: groove;
+    border-color: var(--sp-solor);
+    border-radius: 10px;
+  }
+
+  fieldset:last-child{  /* убрать отступ у последнего элемента */
+    margin-bottom:0;
+  }
+/* 15. КОНЕЦ. СТИЛИ ДЛЯ ПУБЛИКАЦИИ */
+
+
+/* 16. НАЧАЛО. СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТЫ */
+#contact-1{
+    max-width: 1920px;
+    background: linear-gradient(90deg, #FCF9FF 0%, #BCB9BF 100%);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+    align-items: center;
+  }
+  
+  #contact-1-banner{
+  padding-bottom: 50px;
+  }
+  
+  #contact-title{
+  font-size: 2rem;
+  line-height: 100%;
+  max-width: auto;
+  font-weight: 700;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  padding-bottom: 30px;
+  }
+  
+  #contact-subtitle{
+  max-width: 400px;
+  max-height: 700px;
+  line-height: 150%;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  }
+  
+  #contact-img{
+    max-width: 300px;
+    max-height: 300px;
+  }
+/* 16. КОНЕЦ. СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТЫ */
+
+
+/* 17. НАЧАЛО. СТИЛИ ДЛЯ СТРАНИЦЫ ИНФОРМАЦИИ */
+  #information-3{
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 10px;
+  }
+/* 17. КОНЕЦ. СТИЛИ ДЛЯ СТРАНИЦЫ ИНФОРМАЦИИ */

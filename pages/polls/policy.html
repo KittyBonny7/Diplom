@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../../img/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="../../img/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросы про политику</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+
+    <!-- НАЧАЛО. Скрипт для плавной прокрутки страницы по нажатию кнопки -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() != 0) {
+            $("#toTop").fadeIn();
+          } else {
+            $("#toTop").fadeOut();
+          }
+        });
+
+        $("#toTop").click(function () {
+          $("body,html").animate({ scrollTop: 0 }, 800);
+        });
+      });
+    </script>
+    <!-- КОНЕЦ. Скрипт для плавной прокрутки страницы по нажатию кнопки -->
+</head>
+<body>
+    <!-- НАЧАЛО. Меню сайта -->
+    <div class="menu-container">
+      <ul class="menu">
+        <li><a href="../../index.html" class="logo-main_style">
+          <img src="../../img/logo-main.svg" alt="logo">
+        </a></li>
+        <li class="polls"><a href="#">Опросы</a>
+          <ul class="sub-menu">
+            <li><a href="family.html">Семья</a></li>
+            <li><a href="policy.html">Политика</a></li>
+            <li><a href="animals.html">Животные</a></li>
+            <li><a href="ecology.html">Экология</a></li>
+          </ul>
+        </li>
+        <li><a href="../publications.html">Публикации</a></li>
+        <li><a href="../contacts.html">Контакты</a></li>
+        <li><a href="../information.html">Информация</a></li>
+      </ul>
+    </div>
+    <!-- КОНЕЦ. Меню сайта -->
+  
+    <!-- НАЧАЛО. Меню в виде кнопки для мобилки -->
+    <div class="dropdown">
+      <button onclick="toggleMenu()" class="dropbtn"></button>
+      <div id="myDropdown" class="dropdown-content">
+        <div class="dropdown-content-text"><a href="../../index.html">Главная</a></div>
+        <div class="dropdown-content-text"><a href="family.html">Семья</a></div>
+        <div class="dropdown-content-text"><a href="policy.html">Политика</a></div>
+        <div class="dropdown-content-text"><a href="animals.html">Животные</a></div>
+        <div class="dropdown-content-text"><a href="ecology.html">Экология</a></div>
+        <div class="dropdown-content-text"><a href="../publications.html">Публикации</a></div>
+        <div class="dropdown-content-text"><a href="../contacts.html">Контакты</a></div>
+        <div class="dropdown-content-text"><a href="../information.html">Информация</a></div> 
+      </div>
+    </div>
+    <!-- КОНЕЦ. Меню в виде кнопки для мобилки -->
+
+    <!-- НАЧАЛО. Основная информация сайта -->
+    <main class="main-container">
+      <!-- 1 секция -->
+      <section id="policy-1" lang="ru">
+
+        <div id="policy-1-banner">
+          <div id="policy-title">
+            <strong>Опросы по теме политики</strong>
+          </div>
+          <div id="policy-subtitle">
+            <p>Опросы помогают лучше понять потребности и предпочтения людей в отношении животного мира. 
+            Результаты могут помочь улучшить условия содержания животных и разработать более эффективные стратегии их защиты</p>
+          </div>
+        </div>
+
+        <div id="policy-1-img">
+          <img src="../../img/pools/policy/banner.png" style="width: 100%" alt="социальные опросы" />
+        </div>
+      </section>
+
+      <!-- 2 секция -->
+      <section class="Opros_1">
+        <form class="opros">
+          <h3>Опрос №1</h3>
+          <fieldset class="firstVopros">
+            <legend>Откуда Вы чаще всего узнаете о новостях, событиях из жизни Вашего региона, страны, мира?</legend>
+            <div>
+              <input type="radio" id="q1a1" name="q1" value="ТВ" checked />
+              <label for="q1a1">ТВ</label>
+            </div>
+            <div>
+              <input type="radio" id="q1a2" name="q1" value="Социальные сети" />
+              <label for="q1a2">Социальные сети</label>
+            </div>
+            <div>
+              <input type="radio" id="q1a3" name="q1" value="Другое" />
+              <label for="q1a3">Другое</label>
+            </div>
+          </fieldset>
+          <fieldset class="secondVopros">
+            <legend>Вы интересуетесь или не интересуетесь политикой?</legend>
+            <div>
+              <input type="radio" id="q2a1" name="q2" value="Да" checked />
+              <label for="q2a1">Да</label>
+            </div>
+            <div>
+              <input type="radio" id="q2a2" name="q2" value="Нет" />
+              <label for="q2a2">Нет</label>
+            </div>
+            <div>
+              <input type="radio" id="q2a2" name="q2" value="Затрудняюсь ответить"/>
+              <label for="q2a2">Затрудняюсь ответить</label>
+            </div>
+          </fieldset>
+          <fieldset class="thirdVopros">
+            <legend>А раньше, 2-3 года назад, Вы интересовались политикой больше или меньше, чем сейчас?</legend>
+            <div>
+                <input type="radio" id="q3a1" name="q3" value="Больше" checked />
+                <label for="q3a1">Больше</label>
+              </div>
+              <div>
+                <input type="radio" id="q3a2" name="q3" value="Меньше" />
+                <label for="q3a2">Меньше</label>
+              </div>
+              <div>
+                <input type="radio" id="q3a3" name="q3" value="Не изменилось"/>
+                <label for="q3a3">Не изменилось</label>
+              </div>
+              <div>
+                <input type="radio" id="q3a4" name="q4" value="Затрудняюсь ответить"/>
+                <label for="q3a4">Затрудняюсь ответить</label>
+              </div>
+          </fieldset>
+          <br><button id="submitFirst">Отправить</button>
+        </form>
+
+      </section>
+
+    </main>
+    <!-- КОНЕЦ. Основная информация сайта -->
+
+
+    <!-- НАЧАЛО. Подвал для сайта -->
+    <!-- Стрелка  прокрутки в начало страницы-->
+    <div id="toTop">⬆</div>
+    <!-- Футер -->
+    <footer>
+        <div class="footer-container">
+          <p>Горячая линия: <br>8 (953)-333-22-11</p>
+          <p>г. Калуга, ул. Маршала Жукова, д.35</p>
+        </div>
+    </footer>
+    <!-- КОНЕЦ. Подвал для сайта -->
+
+    <!-- НАЧАЛО. Подключение JS файлов -->
+    <script src="../../js/try.js" defer></script>
+    <script src="../../js/policy.js" defer></script>
+    <!-- КОНЕЦ. Подключение JS файлов -->
+</body>
+</html>
