@@ -18,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контакты</title>
-    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/style.css" />
 
     <!-- НАЧАЛО. Скрипт для плавной прокрутки страницы по нажатию кнопки -->
@@ -41,116 +41,123 @@
     <!-- КОНЕЦ. Скрипт для плавной прокрутки страницы по нажатию кнопки -->
 </head>
 <body>
-    <!-- НАЧАЛО. Меню сайта -->
-    <div class="menu-container">
-      <ul class="menu">
-        <li><a href="../index.html" class="logo-main_style">
-          <img src="../img/logo-main.svg" alt="logo">
-        </a></li>
-        <li class="polls"><a href="#">Опросы</a>
-          <ul class="sub-menu">
-            <li><a href="polls/family.html" style="margin-top: 20px">Семья</a></li>
-            <li><a href="polls/policy.html">Политика</a></li>
-            <li><a href="polls/animals.html">Животные</a></li>
-            <li><a href="polls/ecology.html">Экология</a></li>
-          </ul>
-        </li>
-        <li><a href="publications.html">Публикации</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-        <li><a href="information.html">Информация</a></li>
-      </ul>
-    </div>
-    <!-- КОНЕЦ. Меню сайта -->
-  
-    <!-- НАЧАЛО. Меню в виде кнопки для мобилки -->
-    <div class="dropdown">
-      <button onclick="toggleMenu()" class="dropbtn"></button>
-      <div id="myDropdown" class="dropdown-content">
-        <div class="dropdown-content-text"><a href="../index.html">Главная</a></div>
-        <div class="dropdown-content-text"><a href="polls/family.html">Семья</a></div>
-        <div class="dropdown-content-text"><a href="polls/policy.html">Политика</a></div>
-        <div class="dropdown-content-text"><a href="polls/animals.html">Животные</a></div>
-        <div class="dropdown-content-text"><a href="polls/ecology.html">Экология</a></div>
-        <div class="dropdown-content-text"><a href="publications.html">Публикации</a></div>
-        <div class="dropdown-content-text"><a href="contacts.html">Контакты</a></div>
-        <div class="dropdown-content-text"><a href="information.html">Информация</a></div> 
+        <!-- НАЧАЛО. Меню сайта -->
+        <div class="menu-container">
+            <ul class="menu">
+              <li><a href="../index.html" class="logo-main_style">
+                <img src="../img/logo-main.svg" alt="logo">
+              </a></li>
+              <li class="polls"><a href="#">Опросы</a>
+                <ul class="sub-menu">
+                  <li><a href="polls/family.html" style="margin-top: 20px">Семья</a></li>
+                  <li><a href="polls/policy.html">Политика</a></li>
+                  <li><a href="polls/animals.html">Животные</a></li>
+                  <li><a href="polls/ecology.html">Экология</a></li>
+                </ul>
+              </li>
+              <li><a href="publications.html">Публикации</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="information.html">Информация</a></li>
+            </ul>
+          </div>
+          <!-- КОНЕЦ. Меню сайта -->
+    
+      <!-- НАЧАЛО. Меню в виде кнопки для мобилки -->
+      <div class="dropdown">
+        <button onclick="toggleMenu()" class="dropbtn"></button>
+        <div id="myDropdown" class="dropdown-content">
+          <div class="dropdown-content-text"><a href="../index.html">Главная</a></div>
+          <div class="dropdown-content-text"><a href="polls/family.html">Семья</a></div>
+          <div class="dropdown-content-text"><a href="polls/policy.html">Политика</a></div>
+          <div class="dropdown-content-text"><a href="polls/animals.html">Животные</a></div>
+          <div class="dropdown-content-text"><a href="polls/ecology.html">Экология</a></div>
+          <div class="dropdown-content-text"><a href="publications.html">Публикации</a></div>
+          <div class="dropdown-content-text"><a href="#">Контакты</a></div>
+          <div class="dropdown-content-text"><a href="information.html">Информация</a></div> 
+        </div>
       </div>
-    </div>
-    <!-- КОНЕЦ. Меню в виде кнопки для мобилки -->
+      <!-- КОНЕЦ. Меню в виде кнопки для мобилки -->
 
     <!-- НАЧАЛО. Основная информация сайта -->
     <main class="main-container">
-      <!-- 1 секция -->
-      <section id="contact-1">
-        <div id="contact-1-banner">
-          <div id="contact-title" lang="ru">
+    <!-- 1 секция -->
+    <section class="main-banner">
+        <div class="banner">
+          <div class="banner-title" lang="ru">
             <strong>Контакты</strong>
           </div>
-          <div id="contact-subtitle">
-            <p>Здесь размещена информация о полном штате сотрудников сайта: ФИО и должность. Так же можно узнать номера для связи с представителями волонтёрской организации и узнать адрес для личного визита</p>
+          <div class="banner-subtitle">
+            <p>Здесь размещена информация о полном штате сотрудников сайта: ФИО и должность. 
+                Так же можно узнать номера для связи с представителями волонтёрской организации и узнать адрес для личного визита</p>
           </div>
         </div>
 
-        <div id="contact-img">
-          <img src="../img/contacts/banner.png" style="width: 100%" alt="социальные опросы" />
+        <div class="banner-img">
+          <img src="../img/contacts/banner.png" style="width: 100%" alt="социальные опросы" class="banner-img-img"/>
         </div>
-      </section>
+    </section>
 
-      <!-- 2 секция -->
-      <section>
-        <div class="titles" style="text-align: center">
-          <b>Сотрудники проекта</b>
-        </div>
-        <div>
-        <p>● <b>Мазелов Владимир Хесусович - представитель организации</b></p>
-        <p>● <b>Базукин Даниил Дмитриевич - главный социолог</b></p>
-        <p>● Булкин Владимир Сергеевич - социолог</p>
-        <p>● Молокин Илья Владимирович - социолог</p>
-        <p>● Молокина Анастасия Петровна - социолог</p>
-        <p>● Хороший Владислав Владиславович - социолог</p>
-        <p>● <b>Зубарёв Максим Ильич - главный аналитик</b></p>
-        <p>● Дуркина Евгения Алексеевна - аналитик</p>
-        <p>● Лабораторёв Владислав Евгеньевич - аналитик</p>
-        <p>● Варкина Варвара Руслановна - аналитик</p>
-        <p>● Пулкин Павел Альбертович - аналитик</p>
-        <br><p>● <b>Титова Софья Александровна - администратор сайта</b></p>
-        <p>● <b>Скопец Денис Андреевич - тестировщик</b></p>
-        </div>
-      </section>
+<!-- 2 секция -->
+<section>
+    <div class="titles" style="text-align: center">
+      Сотрудники проекта
+    </div>
+    <div>
+    <p>● Титова Софья Александровна - исполнительный директор</p>
+    <p>● Мазелов Владимир Хесусович - представитель организации</p>
+    <p>● Базукин Даниил Дмитриевич - главный социолог</p>
+    <p>● Булкин Владимир Сергеевич - социолог</p>
+    <p>● Молокин Илья Владимирович - социолог</p>
+    <p>● Молокина Анастасия Петровна - социолог</p>
+    <p>● Хороший Владислав Владиславович - социолог</p>
+    <p>● Бебра Юникорн Эльдарович - главный аналитик</p>
+    <p>● Дуркина Евгения Алексеевна - аналитик</p>
+    <p>● Лабораторёв Владислав Евгеньевич - аналитик</p>
+    <p>● Варкина Варвара Руслановна - аналитик</p>
+    <p>● Пулкин Павел Альбертович - аналитик</p>
+    <br><p>● Титова Софья Александровна - администратор сайта</p>
+    <p>● Скопец Денис Андреевич - тестировщик</p>
+    </div>
+  </section>
 
-      <section>
-        <div class="titles" style="text-align: center">
-          <b>Телефон горячей линии</b>
-        </div>
-        <div>
-        <p><b></b>● 8 (953)-333-22-11</b></p>
-        <p><b>● Режим работы: </b>круглосуточно</p>
-        </div>
-      </section>
+  <section>
+    <div class="titles" style="text-align: center">
+      Телефон горячей линии
+    </div>
+    <div>
+    <p>● Горячая линия: <a href="tel:+1-555-123-4567">+7 (902) 328-5062</a>
+    <p>● Режим работы: круглосуточно</p>
+    </div>
+  </section>
 
-      <section>
-        <div class="titles" style="text-align: center">
-          <b>Адрес организации</b>
-        </div>
-        <div>
-          <p><b>● 248018, г. Калуга, ул. Маршала Жукова, д. 35 (проезд троллейбусом № 18 до остановки "Железнодорожная больница")</b></p>
-          <p><b>● Режим работы: </b>с 8.30 ч. до 17.00 ч., перерыв с 12.30 ч. до 13.00 ч.</p>
-          <p><b>● Факс: </b>(4842) 79-46-31</p>
-          <p><b>● Адрес электронной почты: </b>ktep@mail.ru</p>
-        </div>
-      </section>
+  <section>
+    <div class="titles" style="text-align: center">
+      Адрес организации
+    </div>
+    <div>
+      <p>● 248018, г. Калуга, ул. Маршала Жукова, д. 35 (проезд троллейбусом № 18 до остановки "Железнодорожная больница")</p>
+      <p>● Режим работы: с 8.30 ч. до 17.00 ч., перерыв с 12.30 ч. до 13.00 ч.</p>
+      <p>● Факс: (4842) 79-46-31</p>
+      <p>● Адрес электронной почты: ktep@mail.ru</p>
+    </div>
+  </section>
+
+  <!-- Стрелка  прокрутки в начало страницы-->
+  <div id="toTop">⬆</div>
     </main>
     <!-- КОНЕЦ. Основная информация сайта -->
 
 
-    <!-- НАЧАЛО. Подвал для сайта -->
-    <!-- Стрелка  прокрутки в начало страницы-->
-    <div id="toTop">⬆</div>
     <!-- Футер -->
     <footer>
         <div class="footer-container">
-          <p>Горячая линия: <br>8 (953)-333-22-11</p>
-          <p>г. Калуга, ул. Маршала Жукова, д.35</p>
+          <div>
+            <p>Горячая линия: <a class="footer-phone "href="tel:+1-555-123-4567">+7 (902) 328-5062</a>
+            </p>
+          </div>
+          <div>
+            <p>г. Калуга, ул. Маршала Жукова, д.35</p>
+          </div>
         </div>
     </footer>
     <!-- КОНЕЦ. Подвал для сайта -->

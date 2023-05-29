@@ -20,6 +20,9 @@
     <title>Социальные опросы</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
     <!-- НАЧАЛО. Скрипт для плавной прокрутки страницы по нажатию кнопки -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -80,8 +83,9 @@
       <!-- КОНЕЦ. Меню в виде кнопки для мобилки -->
 
     <!-- НАЧАЛО. Основная информация сайта -->
-    <main class="main-container">
-        <!-- 1 секция -->
+    <main class="main-container">     
+      
+        <!-- 1 секция баннер -->
       <section class="main-banner">
         <div class="banner">
           <div class="banner-title" lang="ru">
@@ -98,106 +102,122 @@
       </section>
 
       <!-- 2 секция -->
-      <section>
-        <div class="titles" lang="ru">
-            <strong>Идея сайта</strong>
-          </div>
-          <div>
-          <p class="subtitles">Почему именно этот социальный проект?</p>
-          <p>
-            ⠀⠀⠀По сравнению с традиционными формами опросов граждан (квартирными,
-            телефонными, почтовыми и т.п.), исследования через Интернет позволяют
-            существенно сэкономить время, деньги и человеческие ресурсы. Во многих
-            случаях, проводя онлайн-опрос, исследователь получает возможность
-            набрать значительно большее число респондентов и добиться при этом
-            существенно меньшего уровня затрат. Таким образом, сэкономленные
-            деньги можно направить на благотворительность, содержание сайта, призы
-            различных конкурсов и т.д.
-          </p>
-          <p>
-            <br />⠀⠀⠀Данный проект позволяет усилить широту охвата аудитории. Вы в
-            праве отвечать на те опросы, которые максимально близки к вашим
-            интересам и потребностям. Вы молодая мама, недавно родившая первого
-            ребёнка? Тогда выберите подходящий опрос в разделе "Семья". У Вас есть
-            вопрос к социологу по поводу проведения опроса среди своих
-            респодентов? Звоните на горячую линию!
-          </p>
-          <p>
-            <br />⠀⠀⠀Так же в сети можно опросить тех, кто недоступен для
-            социологов в реальной жизни – никогда не пойдет на контакт. С одной
-            стороны, это – проблемные и маргинальные группы населения – наркоманы,#index-1-img{
-    max-width: 300px;
-    max-height: 300px;
-  }
-            преступники, сексуальные меньшинства, проститутки и т.п. А, с другой
-            стороны, наоборот, высоко обеспеченные граждане и люди обладающие
-            высоким социальным статусом.
-          </p>
-          <p>
-            <br />⠀⠀⠀Дополнительно имеется возможность ориентации на специфические
-            выборки, привлечение людей с конкретными, специфическими интересами.
-            Как правило, добиться этого исследователю позволяет приглашение для
-            участия в интервью респондентов из определенного тематического форума,
-            чата или телеконференции.
-          </p>
-        </div>
-      </section>
-
-      <!-- 3 секция -->
       <!-- Информация о главных сотрудниках -->
       <section>
         <div class="titles">
           <strong>Главные социологи и аналитики</strong>
         </div>
-        <div id="index-3">
-          <div id="employ-1">
-            <picture>
-              <img src="img/index/sociologist.png" style="width: 100%" alt="социальные опросы">
-            </picture>
+        <div class="index-2">
+
+          <div class="employ">
+            <div class="img_employ">
+              <img class="img_img_employ" src="img/index/director.png" style="width: 100%" alt="социальные опросы">
+            </div>
+            <div class="text_employ">
+              <p>Исполнительный директор</p>
+            </div>
+            <div class="text_employ_fi">
+              <p>Титова Софья</p>
+            </div>
           </div>
-          <div class="text_employ">
-            <p>Главный Социолог</p>
+
+          <div class="employ">
+            <div class="img_employ">
+              <img class="img_img_employ" src="img/index/sociologist.png" style="width: 100%" alt="социальные опросы">
+            </div>
+            <div class="text_employ">
+              <p>Главный Социолог</p>
+            </div>
+            <div class="text_employ_fi">
+              <p>Капибаров Владислав</p>
+            </div>
           </div>
-          <div id="employ-2">
-            <picture>
-              <img src="img/index/analyst.png" style="width: 100%" alt="социальные опросы"/>
-            </picture>
+
+          <div class="employ">
+            <div class="img_employ">
+              <img class="img_img_employ" src="img/index/analyst.png" style="width: 100%" alt="социальные опросы"/>
+            </div>
+            <div class="text_employ">
+              <p>Главный Аналитик</p>
+            </div>
+            <div class="text_employ_fi">
+              <p>Бебра Юникорн</p>
+            </div>
           </div>
-          <div class="text_employ">
-            <p>Главный Аналитик</p>
-          </div>
+
         </div>
       </section>
 
-      <!-- 4 секция -->
+      <!-- 3 секция -->
       <!-- Актуальные новости на сайте -->
       <section>
+
         <div class="titles">
           <strong>Публикации</strong>
         </div>
-        <div>
-          <p class="subtitles">Самые актуальные новости на сайте</p>
-          <div class="column">
-            <div style="text-align: center">
-              <a href="pages/blogs/000.html">Открытие сайта ➜</a>
-            </div>
-            <div style="text-align: center">
-              <a href="pages/blogs/001.html">Важность семейных ценностей ➜</a>
-            </div>
-            <div style="text-align: center">
-              <a href="pages/blogs/002.html">Международный женский день ➜</a>
+
+        <div class="subtitles">
+          <p>Последний новости на сайте</p>
+        </div>
+
+        <div class="slider">
+          <div class="slide">
+            <div class="slide-content">
+              <div>
+                <div class="slide-title" lang="ru">
+                  <strong>Открытие сайта</strong>
+                </div>
+                <div class="slide-subtitle">
+                  <p>Компания "Социальные онлайн-опросы" объявила о запуске своего нового сайта, 
+                    предназначенного для проведения опросов в онлайн-формате</p>
+                </div>
+                <a href="pages/blogs/000.html" class="slide-button">Открытие сайта</a>
+              </div>
             </div>
           </div>
+          <div class="slide">
+            <div class="slide-content">
+              <div>
+                <div class="slide-title" lang="ru">
+                  <strong>Важность семейных ценностей</strong>
+                </div>
+                <div class="slide-subtitle">
+                  <p>Важно помнить, что семейные ценности являются основой семьи и общества в целом</p>
+                </div>
+                <a href="pages/blogs/001.html" class="slide-button">Важность семейных ценностей</a>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-content">
+              <div>
+                <div class="slide-title" lang="ru">
+                  <strong>Международный женский день</strong>
+                </div>
+                <div class="slide-subtitle">
+                  <p>Международный женский день – это годовая традиция, которая призывает к осознанию 
+                    и привлечению внимания к правам женщин и их социальным, экономическим и политическим достижениям</p>
+                </div>
+                <a href="pages/blogs/002.html" class="slide-button">Международный женский день</a>
+              </div>
+            </div>
+          </div>
+          <div class="slide-controls">
+            <button class="prev-arrow">&lt;</button>
+            <button class="next-arrow">&gt;</button>
+          </div>
         </div>
+
       </section>
+
 <!-- НАЧАЛО. Подвал для сайта -->
-    <!-- Google Maps -->
+    <!-- 4 секция Google Maps -->
     <section>
-      <div id="google-maps">
+      <div class="google-maps">
           <div class="titles">
             <strong>Мы на карте</strong>
           </div>
-          <iframe id="index-map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.8848585641067!2d36.28691705161615!3d54.517891980144185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4134b962a5e0927b%3A0x77fa38e436e96e3d!2z0JPQkdCf0J7QoyDQmtCeICLQmtCw0LvRg9C20YHQutC40Lkg0YLQtdGF0L3QuNC60YPQvCDRjdC70LXQutGC0YDQvtC90L3Ri9GFINC_0YDQuNCx0L7RgNC-0LIi!5e0!3m2!1sru!2sru!4v1680482791652!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe class="index-map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.8848585641067!2d36.28691705161615!3d54.517891980144185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4134b962a5e0927b%3A0x77fa38e436e96e3d!2z0JPQkdCf0J7QoyDQmtCeICLQmtCw0LvRg9C20YHQutC40Lkg0YLQtdGF0L3QuNC60YPQvCDRjdC70LXQutGC0YDQvtC90L3Ri9GFINC_0YDQuNCx0L7RgNC-0LIi!5e0!3m2!1sru!2sru!4v1680482791652!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
   </section>
   <!-- Стрелка  прокрутки в начало страницы-->
@@ -210,7 +230,7 @@
     <footer>
         <div class="footer-container">
           <div>
-            <p>Горячая линия: <a class="footer-phone"href="tel:+1-555-123-4567">+7 (902) 328-5062</a>
+            <p>Горячая линия: <a class="footer-phone"href="tel:+7-902-328-5062">+7 (902) 328-5062</a>
             </p>
           </div>
           <div>
