@@ -41,62 +41,64 @@
     <!-- КОНЕЦ. Скрипт для плавной прокрутки страницы по нажатию кнопки -->
 </head>
 <body>
-    <!-- НАЧАЛО. Меню сайта -->
-    <div class="menu-container">
-      <ul class="menu">
-        <li><a href="../../index.html" class="logo-main_style">
-          <img src="../../img/logo-main.svg" alt="logo">
-        </a></li>
-        <li class="polls"><a href="#">Опросы</a>
-          <ul class="sub-menu">
-            <li><a href="family.html" style="margin-top: 20px">Семья</a></li>
-            <li><a href="policy.html">Политика</a></li>
-            <li><a href="animals.html">Животные</a></li>
-            <li><a href="ecology.html">Экология</a></li>
-          </ul>
-        </li>
-        <li><a href="../publications.html">Публикации</a></li>
-        <li><a href="../contacts.html">Контакты</a></li>
-        <li><a href="../information.html">Информация</a></li>
-      </ul>
-    </div>
-    <!-- КОНЕЦ. Меню сайта -->
-  
-    <!-- НАЧАЛО. Меню в виде кнопки для мобилки -->
-    <div class="dropdown">
-      <button onclick="toggleMenu()" class="dropbtn"></button>
-      <div id="myDropdown" class="dropdown-content">
-        <div class="dropdown-content-text"><a href="../../index.html">Главная</a></div>
-        <div class="dropdown-content-text"><a href="family.html">Семья</a></div>
-        <div class="dropdown-content-text"><a href="policy.html">Политика</a></div>
-        <div class="dropdown-content-text"><a href="animals.html">Животные</a></div>
-        <div class="dropdown-content-text"><a href="ecology.html">Экология</a></div>
-        <div class="dropdown-content-text"><a href="../publications.html">Публикации</a></div>
-        <div class="dropdown-content-text"><a href="../contacts.html">Контакты</a></div>
-        <div class="dropdown-content-text"><a href="../information.html">Информация</a></div> 
+        <!-- НАЧАЛО. Меню сайта -->
+        <div class="menu-container">
+            <ul class="menu">
+              <li><a href="../../index.html" class="logo-main_style">
+                <img src="../../img/logo-main.svg" alt="logo">
+              </a></li>
+              <li class="polls"><a href="#">Опросы</a>
+                <ul class="sub-menu">
+                  <li><a href="../polls/family.html" style="margin-top: 20px">Семья</a></li>
+                  <li><a href="../polls/policy.html">Политика</a></li>
+                  <li><a href="#">Животные</a></li>
+                  <li><a href="../polls/ecology.html">Экология</a></li>
+                </ul>
+              </li>
+              <li><a href="../publications.html">Публикации</a></li>
+              <li><a href="../contacts.html">Контакты</a></li>
+              <li><a href="../information.html">Информация</a></li>
+            </ul>
+          </div>
+          <!-- КОНЕЦ. Меню сайта -->
+    
+      <!-- НАЧАЛО. Меню в виде кнопки для мобилки -->
+      <div class="dropdown">
+        <button onclick="toggleMenu()" class="dropbtn"></button>
+        <div id="myDropdown" class="dropdown-content">
+          <div class="dropdown-content-text"><a href="../../index.html">Главная</a></div>
+          <div class="dropdown-content-text"><a href="../polls/family.html">Семья</a></div>
+          <div class="dropdown-content-text"><a href="../polls/policy.html">Политика</a></div>
+          <div class="dropdown-content-text"><a href="#">Животные</a></div>
+          <div class="dropdown-content-text"><a href="../polls/ecology.html">Экология</a></div>
+          <div class="dropdown-content-text"><a href="../publications.html">Публикации</a></div>
+          <div class="dropdown-content-text"><a href="../contacts.html">Контакты</a></div>
+          <div class="dropdown-content-text"><a href="../information.html">Информация</a></div> 
+        </div>
       </div>
-    </div>
-    <!-- КОНЕЦ. Меню в виде кнопки для мобилки -->
+      <!-- КОНЕЦ. Меню в виде кнопки для мобилки -->
 
     <!-- НАЧАЛО. Основная информация сайта -->
     <main class="main-container">
-      <!-- 1 секция -->
-      <section id="animals-1" lang="ru">
+    <!-- 1 секция -->
+    <section class="main-banner">
 
-        <div id="animals-1-banner">
-          <div id="animals-title">
-            <strong>Опросы по теме животных</strong>
+        <div class="banner">
+          <div class="banner-title" lang="ru">
+            <strong>Опросы про животных</strong>
           </div>
-          <div id="animals-subtitle">
-            <p>Опросы помогают лучше понять потребности и предпочтения людей в отношении животного мира. 
-            Результаты могут помочь улучшить условия содержания животных и разработать более эффективные стратегии их защиты</p>
+          <div class="banner-subtitle">
+            <p>Опросы помогают лучше понять потребности и предпочтения людей в отношении животного мира. Результаты могут помочь улучшить условия 
+                содержания животных и разработать более эффективные стратегии их защиты
+            </p>
           </div>
         </div>
 
-        <div id="animals-img">
-          <img src="../../img/pools/animals/banner.png" style="width: 100%" alt="социальные опросы" />
+        <div class="banner-img">
+          <img src="../../img/pools/animals/banner.png" style="width: 100%" alt="социальные опросы" class="banner-img-img"/>
         </div>
-      </section>
+
+    </section>
 
       <!-- 2 секция -->
       <section class="Opros_1">
@@ -156,18 +158,22 @@
 
       </section>
 
+  <!-- Стрелка  прокрутки в начало страницы-->
+  <div id="toTop">⬆</div>
     </main>
     <!-- КОНЕЦ. Основная информация сайта -->
 
 
-    <!-- НАЧАЛО. Подвал для сайта -->
-    <!-- Стрелка  прокрутки в начало страницы-->
-    <div id="toTop">⬆</div>
     <!-- Футер -->
     <footer>
         <div class="footer-container">
-          <p>Горячая линия: <br>8 (953)-333-22-11</p>
-          <p>г. Калуга, ул. Маршала Жукова, д.35</p>
+          <div>
+            <p>Горячая линия: <a class="footer-phone "href="tel:+1-555-123-4567">+7 (902) 328-5062</a>
+            </p>
+          </div>
+          <div>
+            <p>г. Калуга, ул. Маршала Жукова, д.35</p>
+          </div>
         </div>
     </footer>
     <!-- КОНЕЦ. Подвал для сайта -->

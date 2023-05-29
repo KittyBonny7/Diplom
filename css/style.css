@@ -232,6 +232,7 @@ body{
       display: none;
   }
     .main-container{
+      width: 1200px;
       padding-top: 120px;
       margin-right: auto;
       margin-left: auto;
@@ -299,15 +300,15 @@ body{
     .new-subtitles{
       font-size: 16px;
     }
-    #information-3{
+    .information-3{
       display: flex;
       flex-direction: row;
       }
-    #information-3-text{
+    .information-3-text{
       width: 600px;
       padding: 70px 0 70px 70px;
     }
-    #information-3-img{
+    .information-3-img{
       display: flex;
       align-items: center;
       max-width: 483px;
@@ -399,15 +400,15 @@ body{
     .new-subtitles{
       font-size: 18px;
     }
-    #information-3{
+    .information-3{
     display: flex;
     flex-direction: row;
     }
-    #information-3-text{
+    .information-3-text{
       width: 480px;
       padding: 50px 0 50px 50px;
     }
-    #information-3-img{
+    .information-3-img{
       display: flex;
       align-items: center;
       max-width: 466px;
@@ -507,15 +508,15 @@ body{
     .new-subtitles{
       font-size: 18px;
     }
-    #information-3{
+    .information-3{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
   }
-    #information-3-text{
+    .information-3-text{
       padding: 30px 0 30px 30px;
     }
-    #information-3-img{
+    .information-3-img{
       max-width: 524px;
     }
   }
@@ -644,16 +645,16 @@ body{
     .new-subtitles{
       font-size: 14px;
     }
-    #information-3{
+    .information-3{
       display: flex;
       flex-wrap: wrap;
       align-items: center;
     }
-    #information-3-text{
+    .information-3-text{
       width: 258px;
       padding: 15px 15px 15px 15px;
     }
-    #information-3-img{
+    .information-3-img{
       max-width: 258px;
     }
 }
@@ -707,6 +708,7 @@ color: var(--sp-solor-button-hover)
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px 0px;
   }
   .banner-title{
     color: var(--sp-solor-maintext);
@@ -914,197 +916,33 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
 /* 10. КОНЕЦ. СТИЛИ ДЛЯ ГЛАВНОЙ */
 
 
+
 /* 11. НАЧАЛО. СТИЛИ ДЛЯ СЕМЬЯ */
-#family-1{
-    max-width: 1920px;
-    background: linear-gradient(90deg, #FCF9FF 0%, #BCB9BF 100%);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 15px;
-    align-items: center;
-}
-  
-  #family-1-banner{
-  padding-bottom: 50px;
-  }
-  
-  #family-title{
-  font-size: 2rem;
-  line-height: 100%;
-  max-width: auto;
-  font-weight: 700;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
-  padding-bottom: 30px;
-  hyphens: auto;
-  }
-  
-  #family-subtitle{
-  max-width: 400px;
-  max-height: 700px;
-  line-height: 150%;
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
-  hyphens: auto;
-  }
-  
-  #family-1-img{
-    max-width: 300px;
-    max-height: 300px;
-  }
+
 /* 11. КОНЕЦ. СТИЛИ ДЛЯ СЕМЬЯ */
 
 
+
 /* 12. НАЧАЛО. СТИЛИ ДЛЯ ПОЛИТИКА */
-#policy-1{
-    max-width: 1920px;
-    background: linear-gradient(90deg, #FCF9FF 0%, #BCB9BF 100%);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 15px;
-    align-items: center;
-  }
-  
-  #policy-1-banner{
-  padding-bottom: 50px;
-  }
-  
-  #policy-title{
-  font-size: 2rem;
-  line-height: 100%;
-  max-width: auto;
-  font-weight: 700;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
-  padding-bottom: 30px;
-  hyphens: auto;
-  }
-  
-  #policy-subtitle{
-  max-width: 400px;
-  max-height: 700px;
-  line-height: 150%;
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
-  hyphens: auto;
-  }
-  
-  #policy-1-img{
-    max-width: 300px;
-    max-height: 300px;
-  }
+
 /* 12. КОНЕЦ. СТИЛИ ДЛЯ ПОЛИТИКА */
 
 
+
 /* 13. НАЧАЛО. СТИЛИ ДЛЯ ЖИВОТНЫХ */
-#animals-1{
-    max-width: 1920px;
-    background: linear-gradient(90deg, #FCF9FF 0%, #BCB9BF 100%);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 15px;
-    align-items: center;
-  }
-  
-  #animals-1-banner{
-  padding-bottom: 50px;
-  }
-  
-  #animals-title{
-  font-size: 2rem;
-  line-height: 100%;
-  max-width: auto;
-  font-weight: 700;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
-  padding-bottom: 30px;
-  }
-  
-  #animals-subtitle{
-  max-width: 400px;
-  max-height: 700px;
-  line-height: 150%;
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
-  }
-  
-  #animals-img{
-    max-width: 300px;
-    max-height: 300px;
-  }
+
 /* 13. КОНЕЦ. СТИЛИ ДЛЯ ЖИВОТНЫХ */
 
 
+
 /* 14. НАЧАЛО. СТИЛИ ДЛЯ ЭКОЛОГИЯ */
-#ecology-1{
-    max-width: 1920px;
-    background: linear-gradient(90deg, #FCF9FF 0%, #BCB9BF 100%);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 15px;
-    align-items: center;
-  }
-  
-  #ecology-1-banner{
-  padding-bottom: 50px;
-  }
-  
-  #ecology-title{
-  font-size: 2rem;
-  line-height: 100%;
-  max-width: auto;
-  font-weight: 700;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
-  padding-bottom: 30px;
-  hyphens: auto;
-  }
-  
-  #ecology-subtitle{
-  max-width: 400px;
-  max-height: 700px;
-  line-height: 150%;
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
-  hyphens: auto;
-  }
-  
-  #ecology-1-img{
-    max-width: 300px;
-    max-height: 300px;
-  }
+
 /* 14. КОНЕЦ. СТИЛИ ДЛЯ ЭКОЛОГИЯ */
+
 
 
 /* 15. НАЧАЛО. СТИЛИ ДЛЯ ПУБЛИКАЦИИ */
@@ -1140,60 +978,27 @@ footer {
 .new-subtitles{
   color: var(--sp-solor-text);
 }
+
+.new_002{
+  text-align: center;
+  font-weight: 600;
+  color: var(--sp-solor-button-dark);
+}
 /* 15. КОНЕЦ. СТИЛИ ДЛЯ ПУБЛИКАЦИИ */
 
 
+
 /* 16. НАЧАЛО. СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТЫ */
-#contact-1{
-    max-width: 1920px;
-    background: linear-gradient(90deg, #FCF9FF 0%, #BCB9BF 100%);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 15px;
-    align-items: center;
-  }
-  
-  #contact-1-banner{
-  padding-bottom: 50px;
-  }
-  
-  #contact-title{
-  font-size: 2rem;
-  line-height: 100%;
-  max-width: auto;
-  font-weight: 700;
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
-  padding-bottom: 30px;
-  }
-  
-  #contact-subtitle{
-  max-width: 400px;
-  max-height: 700px;
-  line-height: 150%;
-  flex: none;
-  order: 2;
-  align-self: stretch;
-  flex-grow: 0;
-  }
-  
-  #contact-img{
-    max-width: 300px;
-    max-height: 300px;
-  }
+
 /* 16. КОНЕЦ. СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТЫ */
 
 
+
 /* 17. НАЧАЛО. СТИЛИ ДЛЯ СТРАНИЦЫ ИНФОРМАЦИИ */
-  #information-3{
+  .information-3{
     display: flex;
     justify-content: center;
-    background: #FFFFFF;
+    background: var(--sp-solor-button-text);
     border-radius: 10px;
   }
 /* 17. КОНЕЦ. СТИЛИ ДЛЯ СТРАНИЦЫ ИНФОРМАЦИИ */
