@@ -1,0 +1,190 @@
+img {
+    pointer-events: none;
+    user-select: none;
+}
+/* 2. НАЧАЛО. ОБЩИЕ СТИЛИ ДЛЯ МЕНЮ И ВЫПАДАЮЩЕГО СПИСКА */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--sp-solor);
+    z-index: 9999;
+}
+  
+.menu {
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+  
+.logo-main_style{
+    height: 32px;
+}
+
+.menu li {
+    position: relative;
+}
+  
+.menu a {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    text-transform: uppercase;
+    color: var(--sp-solor-button-text);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-container a:hover{
+    color: var(--sp-solor-button-text-hover);
+}
+
+ul li:hover a {
+    color: var(--sp-solor-button-text);
+}
+
+/* Стили для выпадающего списка при наведении на "Опросы" */
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin: 0;
+    padding: 0px;
+    left: 0;
+    list-style: none;
+    background-color: var(--sp-solor);
+    width: calc(100% - 2px); /* ширина с учетом границы */
+    z-index: 1; 
+}
+  
+.sub-menu li {
+    padding-top: 10px;
+    width: 100%;
+}
+  
+.sub-menu a {
+    display: block;
+    padding: 15px;
+    color: var(--sp-solor-button-text);
+    text-decoration: none;
+}
+  
+.sub-menu li > a {
+    color: var(--sp-solor-button-text);
+}
+
+.menu .polls:hover > .sub-menu {
+    display: block;
+}
+
+.menu li {
+    width: 100%;
+}
+
+@media (max-width: 40em) {
+    .menu li {
+      width: 100%;
+    }
+}
+
+.dropdown{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--sp-solor);
+    z-index: 9999;
+}
+.dropdown a{
+    color: var(--sp-solor-button-text);
+    text-decoration: none;
+}
+.dropdown a:hover{
+    color: var(--sp-solor-button-text-hover);
+}
+.dropbtn {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-weight: 700;
+}
+.dropdown-content {
+    position: absolute;
+    background-color: var(--sp-solor);
+    z-index: 1;
+  }
+/* 2. КОНЕЦ. ОБЩИЕ СТИЛИ ДЛЯ МЕНЮ И ВЫПАДАЮЩЕГО СПИСКА */
+
+/* 4. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ 1440px И БОЛЬШЕ */
+@media only screen and (min-width: 1440px) {
+    .menu{
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .dropdown{
+        display: none;
+    }
+}
+/* 4. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ 1440px И БОЛЬШЕ */
+
+/* 5. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px */
+@media only screen and (max-width: 1024px) {
+    body{
+      font-size: 18px;
+    }
+    .menu{
+      max-width: 964px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .dropdown{
+        display: none;
+    }
+}
+/* 5. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px */
+
+/* 6. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px */
+@media only screen and (max-width: 768px) {
+    body{
+        font-size: 16px;
+    }
+    .menu-container{
+        display: none;
+    }
+    .dropdown{
+        display: block;
+    }
+    .dropdown-content-text{
+      padding: 20px 30px 20px 30px;
+    }
+    .dropbtn{
+      padding: 10px 0 10px 32px;
+    }
+}
+/* 6. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px */
+
+/* 7. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px */
+@media only screen and (max-width: 320px) {
+    body{
+        font-size: 14px;
+    }
+    .menu-container{
+        display: none;
+    }
+    .dropdown{
+        display: block;
+    }
+    .dropdown-content-text{
+        padding: 10px 20px 10px 20px;
+    }
+    .dropbtn{
+        padding: 10px 0 10px 16px;
+    }
+}
+/* 7. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px */

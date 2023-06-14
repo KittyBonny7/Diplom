@@ -1,0 +1,17 @@
+export const MAIN_ROUTE = '/'
+export const POLLS_ROUTE = '/polls'
+export const FAMILY_ROUTE = '/family'
+export const POLICY_ROUTE = '/policy'
+export const ANIMALS_ROUTE = '/animals'
+export const ECOLOGY_ROUTE = '/ecology'
+export const NEWS_ROUTE = '/news'
+export const NEW000_ROUTE = '/new000'
+export const NEW001_ROUTE = '/new001'
+export const NEW002_ROUTE = '/new002'
+export const CONTACTS_ROUTE = '/contacts'
+export const INFORMATION_ROUTE = '/information'
+export const REG_ROUTE = '/registration'
+export const AUTH_ROUTE = '/auth'
+
+
+export const serverPort = 'http://localhost:5000'

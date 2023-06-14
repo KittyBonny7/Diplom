@@ -1,0 +1,84 @@
+/* 0. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ 1440px И БОЛЬШЕ */
+@media only screen and (min-width: 1440px) {
+    .information-3{
+      display: flex;
+      flex-direction: row;
+      }
+    .information-3-text{
+      width: 600px;
+      padding: 70px 0 70px 70px;
+    }
+    .information-3-img{
+      display: flex;
+      align-items: center;
+      max-width: 483px;
+    }
+}
+/* 0. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ 1440px И БОЛЬШЕ */
+
+
+/* 1. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px */
+@media only screen and (max-width: 1024px) {
+    .information-3{
+    display: flex;
+    flex-direction: row;
+    }
+    .information-3-text{
+      width: 480px;
+      padding: 50px 0 50px 50px;
+    }
+    .information-3-img{
+      display: flex;
+      align-items: center;
+      max-width: 466px;
+    }
+}
+/* 1. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px */
+
+
+/* 2. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px */
+@media only screen and (max-width: 768px) {
+    .information-3{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+    .information-3-text{
+      padding: 30px 0 30px 30px;
+    }
+    .information-3-img{
+      max-width: 524px;
+    }
+}
+/* 2. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px */
+
+
+/* 3. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px */
+@media only screen and (max-width: 320px) {
+    .information-3{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .information-3-text{
+      width: 258px;
+      padding: 15px 15px 15px 15px;
+    }
+    .information-3-img{
+      max-width: 258px;
+    }
+}
+/* 3. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px */
+
+
+/* 4. НАЧАЛО. СТИЛИ ДЛЯ СТРАНИЦЫ ИНФОРМАЦИИ */
+.information-3{
+    display: flex;
+    justify-content: center;
+    background: var(--sp-solor-button-text);
+    border-radius: 10px;
+}
+.information-3-img-img{
+    width: 100%;
+}
+/* 4. КОНЕЦ. СТИЛИ ДЛЯ СТРАНИЦЫ ИНФОРМАЦИИ */

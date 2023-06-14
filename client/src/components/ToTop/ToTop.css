@@ -1,0 +1,19 @@
+  /* Кнопка  для пролистывания вверх*/
+  #toTop {
+    width: 50px;
+    border: 1px solid var(--sp-solor-maintext);
+    background: var(--sp-solor);
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    color: var(--sp-solor-maintext);
+  }
+  #toTop:hover {
+    background: var(--sp-solor-button-hover);
+    color: var(--sp-solor-button-text-hover);
+    border: 1px solid var(--sp-solor-button-text-hover);
+  }

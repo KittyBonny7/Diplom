@@ -1,0 +1,71 @@
+/* 0. НАЧАЛО. СТИЛИ ДЛЯ ПОДВАЛА */
+footer {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--sp-solor);
+    margin: 0 auto;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-container p {
+    font-size: 12px;
+    color: var(--sp-solor-button-text);
+    text-align: center;
+    margin: 0;
+    padding: 15px 0 0 0;
+}
+footer p{
+    color: var(--sp-solor-button-text);
+}
+footer a{
+    font-size: 14px;
+    color: var(--sp-solor-button-text);
+}
+
+
+/* 1. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ 1440px И БОЛЬШЕ */
+@media only screen and (min-width: 1440px) {
+.footer-container{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+} 
+}
+/* 1. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ 1440px И БОЛЬШЕ */
+
+
+/* 2. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px */
+@media only screen and (max-width: 1024px) {
+    .footer-container{
+        max-width: 964px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+/* 2. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px */
+
+
+/* 3. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px */
+@media only screen and (max-width: 768px) {
+    .footer-container{
+        max-width: 691px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+/* 3. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px */
+
+
+/* 4. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px */
+@media only screen and (max-width: 320px) {
+    .footer-container{
+        max-width: 288px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+}
+/* 4. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px */

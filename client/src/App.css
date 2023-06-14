@@ -1,0 +1,273 @@
+/* 0. НАЧАЛО. ПЕРЕМЕННЫЕ ДЛЯ CSS */
+:root {
+    /* (Social polls (Социальные опросы) - sp) */
+    --sp-solor: #006400;
+    --sp-solor-maintext: #080D13;
+    --sp-solor-text: #080D13A6;
+    --sp-solor-body-background: #F5F5F6;
+    --sp-solor-button:#008000;
+    --sp-solor-button-hover:#228B22;
+    --sp-solor-button-dark:#006400;
+    --sp-solor-button-text: #FFFFFF;
+    --sp-solor-button-text-hover: #00FF00;
+}
+/* 0. КОНЕЦ. ПЕРЕМЕННЫЕ ДЛЯ CSS */
+  
+  
+/* 1. НАЧАЛО. ОБЩИЕ СТИЛИ ДЛЯ BODY */
+*{
+  margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    line-height: 150%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: var(--sp-solor-maintext);
+    margin: 0;
+    background-color: var(--sp-solor-body-background);  
+    scroll-padding-top: 100px;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 1. КОНЕЦ. ОБЩИЕ СТИЛИ ДЛЯ BODY */
+
+
+/* 2. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ 1440px И БОЛЬШЕ */
+@media only screen and (min-width: 1440px) {
+    body{
+      font-size: 18px;
+    } 
+    .main-container{
+      width: 1200px;
+      padding-top: 60px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    section{
+      max-width: 1200px;
+      margin-bottom: 135px; 
+    }
+    .titles{
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    .subtitles{
+      font-size: 18px;
+      margin-bottom: 60px;
+    }.banner{
+      width: 600px;
+      padding: 70px 20px 70px 70px;
+    }
+    .banner-img-img{
+      max-width: 600px;
+      height: 430px;
+    }
+    .banner-title{
+      font-size: 36px;
+    }
+    .banner-subtitle{
+      font-size: 18px;
+    }
+}
+/* 2. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ 1440px И БОЛЬШЕ */
+
+
+/* 3. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px */
+@media only screen and (max-width: 1024px) {
+    body{
+      font-size: 18px;
+    }
+    .main-container{
+      padding-top: 60px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    section{
+      max-width: 964px;
+      margin-bottom: 95px;
+      margin-left: 30px;
+      margin-right: 30px; 
+    }
+    .titles{
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    .subtitles{
+      font-size: 18px;
+      margin-bottom: 40px;
+    }.banner{
+      width: 480px;
+      padding: 50px 20px 50px 50px;
+    }
+    .banner-img-img{
+      max-width: 400px;
+    }
+    .banner-title{
+      font-size: 30px;
+    }
+    .banner-subtitle{
+      font-size: 18px;
+    }
+}
+/* 3. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 1024px */
+
+
+/* 4. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px */
+@media only screen and (max-width: 768px) {
+    body{
+      font-size: 16px;
+    }
+    section{
+      max-width: 691px;
+      margin-bottom: 85px;
+      margin-left: 30px;
+      margin-right: 30px; 
+    }
+    .titles{
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    .subtitles{
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    .banner{
+      width: 352px;
+      padding: 30px 20 30px 30px;
+    }
+    .banner-img-img{
+      width: 339px;
+    }
+    .banner-title{
+      font-size: 24px;
+    }
+    .banner-subtitle{
+      font-size: 16px;
+    }
+}
+/* 4. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 768px */
+
+
+/* 5. НАЧАЛО. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px */
+@media only screen and (max-width: 320px) {
+    body{
+      font-size: 14px;
+    }
+    section{
+      max-width: 288px;
+      margin-bottom: 70px;
+      margin-left: 16px;
+      margin-right: 16px; 
+    } 
+    .titles{
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    .subtitles{
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    .main-banner{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .banner{
+      width: 258px;
+      padding: 15px 15px 15px 15px;
+    }
+    .banner-img-img{
+      max-width: 258px;
+    }
+    .banner-title{
+      font-size: 22px;
+    }
+    .banner-subtitle{
+      font-size: 14px;
+    }
+}
+/* 5. КОНЕЦ. МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ МЕНЬШЕ 320px */
+
+
+/* 6. НАЧАЛО. Общие стили для БАННЕРА */
+.main-banner{
+  background: linear-gradient(90deg, #EDEDEF 0%, #E4E4E6 100%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.banner{
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.banner-img-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+}
+.banner-title{
+  color: var(--sp-solor-maintext);
+  line-height: 100%;
+  max-width: auto;
+  font-weight: 700;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  padding-bottom: 30px;
+  hyphens: auto;
+}
+.banner-subtitle{
+  max-height: 700px;
+  line-height: 150%;
+  flex: none;
+  order: 2;
+  align-self: stretch;
+  flex-grow: 0;
+  hyphens: auto;
+}
+/* 6. КОНЕЦ. Общие стили для БАННЕРА */
+
+
+/* 7. НАЧАЛО. СТИЛИ ДЛЯ КОНТЕНТА */
+section{
+  width: 100%;
+  margin-bottom: 135px;
+  color: var(--sp-solor-maintext);
+  line-height: 150%;
+} 
+
+a{
+    color: var(--sp-solor);
+}
+    
+a:hover{
+    color: var(--sp-solor-button-hover)
+}
+
+.titles {
+    font-weight: 700;
+    color: var(--sp-solor-maintext);
+    line-height: 100%;
+    text-align: center;
+}
+  
+.subtitles {
+    color: var(--sp-solor-text);
+    line-height: 150%;
+    hyphens: auto;
+    text-align: center;
+}
+/* 7. КОНЕЦ. СТИЛИ ДЛЯ КОНТЕНТА */
